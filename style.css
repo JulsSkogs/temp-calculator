@@ -41,8 +41,13 @@ body {
   position: relative;
 }
 
+button {
+  padding: 20px;
+}
+
 .output {
   color: white;
   display: flex;
   justify-content: flex-end;
+  font-size: 40px;
 }
