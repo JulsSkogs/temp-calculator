@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>TempCalc</title>
     <link
       rel="icon"
       type="image/png"
@@ -17,8 +17,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <i class="fa-solid fa-check"></i>
-    <!-- Script -->
+    <!-- Calc Container -->
+    <div class="calc-container" id="calc-container">
+      <div class="calc">
+        <!-- Input -->
+        <input
+          type="text"
+          class="temp-input"
+          placeholder="Input temperature here!"
+        />
+        <!-- Buttons -->
+        <div class="unit-btns">
+          <div class="input-btn">
+            <button class="input-sel">°F</button>
+            <button class="input-sel">°C</button>
+            <button class="input-sel">K</button>
+          </div>
+          <div class="output-btn">
+            <button class="output-sel">°F</button>
+            <button class="output-sel">°C</button>
+            <button class="output-sel">K</button>
+          </div>
+        </div>
+
+        <div class="output" id="output">Placeholder</div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <!-- Scripts -->
     <script src="script.js"></script>
   </body>
 </html>
