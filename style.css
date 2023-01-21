@@ -17,37 +17,35 @@ body {
 }
 
 .calc-container {
-  width: 80%;
-  max-width: 1200px;
+  width: 60vw;
   padding: 150px 130px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 20%;
 }
 
-.temp-input {
+.input {
   display: flex;
   padding: 10px 20px;
-  position: relative;
-  background-color: #666666;
-}
-
-.btn-container {
-  /* background-color: ; */
-  display: block;
-  justify-content: space-between;
-  padding: 5px;
-  margin: 5px;
-  position: relative;
+  background-color: #27272a;
+  color: white;
+  border: 1px;
+  border-radius: 10px;
 }
 
 button {
   padding: 20px;
+  margin: 5px;
+  background-color: #27272a;
+  color: white;
+  border: 1px;
+  border-radius: 10px;
 }
 
 .output {
   color: white;
-  display: flex;
-  justify-content: flex-end;
   font-size: 40px;
+  padding-top: 40px;
 }
