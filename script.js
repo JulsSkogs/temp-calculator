@@ -1,3 +1,15 @@
+const calculatedTemp = document.getElementById("output");
+const inF = document.getElementById("inF");
+const inC = document.getElementById("inC");
+const inK = document.getElementById("inK");
+const outF = document.getElementById("outF");
+const outC = document.getElementById("outC");
+const outK = document.getElementById("outK");
+const calcBtn = document.getElementById("calc-btn");
+let temp = document.getElementById("input");
+let inputUnit;
+let outputUnit;
+
 // F to C: ((F - 32) * .5556) = C
 // C to F: ((C * 1.8) + 32) = F
 // F to K: ((F + 459.67) * (5/9) = K
@@ -15,13 +27,13 @@ function fToC(temp) {
 }
 
 function cToF(temp) {
-  let F = C * 1.8 + 32;
+  let F = temp * 1.8 + 32;
   return F;
 }
 
 function fToK(temp) {
-  let F = (F + 459.67) * (5 / 9);
-  return F;
+  let K = (temp + 459.67) * (5 / 9);
+  return K;
 }
 
 function cToK(temp) {
@@ -30,7 +42,7 @@ function cToK(temp) {
 }
 
 function kToF(temp) {
-  let F = K * (9 / 5) - 459.67;
+  let F = temp * (9 / 5) - 459.67;
   return F;
 }
 
@@ -38,3 +50,5 @@ function kToC(temp) {
   let C = temp - 273.15;
   return C;
 }
+
+// Event Listeners
