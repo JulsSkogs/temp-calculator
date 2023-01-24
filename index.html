@@ -8,7 +8,7 @@
     <link
       rel="icon"
       type="image/png"
-      href="https://www.google.com/s2/u/0/favicons?domain=julsskogs.io"
+      href=""
     />
     <link
       rel="stylesheet"
@@ -22,23 +22,27 @@
     <!-- Calc Container -->
     <div class="calc-container" id="calc-container">
         <!-- Input -->
-        <input
+          <input
           type="text"
           class="input"
+          id="input"
           placeholder="Input temperature here!"
-        />
+          />
         <!-- Buttons -->
-        <div class="btn-container">
-          <div class="input-btn">
-            <button class="input-sel f">°F</button>
-            <button class="input-sel c">°C</button>
-            <button class="input-sel k">K</button>
+        <div class="in-out-container">
+          <div class="unit-text">Input Unit</div>
+          <div class="input-btns">
+            <button class="btn input-sel" id="inF">F</button>
+            <button class="btn input-sel" id="inC">C</button>
+            <button class="btn input-sel" id="inK">K</button>
           </div>
-          <div class="output-btn">
-            <button class="output-sel f">°F</button>
-            <button class="output-sel c">°C</button>
-            <button class="output-sel k">K</button>
+          <div class="unit-text">Output Unit</div>
+          <div class="output-btns">
+            <button class="btn output-sel" id="outF">F</button>
+            <button class="btn output-sel" id="outC">C</button>
+            <button class="btn output-sel" id="outK">K</button>
           </div>
+          <button class="btn" id="calc-btn">Run!</button>
           </div>
         <div class="output" id="output">Placeholder</div>
       </div>
