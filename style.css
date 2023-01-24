@@ -44,6 +44,14 @@ button {
   border-radius: 10px;
 }
 
+#calc-btn {
+  width: 170px;
+}
+
+.unit-text {
+  color: white;
+}
+
 .output {
   color: white;
   font-size: 40px;
