@@ -44,6 +44,14 @@ button {
   border-radius: 10px;
 }
 
+inC:disabled {
+  color: white;
+}
+
+inK:disabled {
+  color: white;
+}
+
 #calc-btn {
   width: 170px;
 }
