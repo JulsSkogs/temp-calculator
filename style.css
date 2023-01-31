@@ -62,6 +62,8 @@ inK:disabled {
 
 .output {
   color: white;
-  font-size: 40px;
-  padding-top: 40px;
+  font-size: 80px;
+  padding: 50px;
 }
+
+/* Media Queries */
