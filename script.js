@@ -8,9 +8,9 @@ const outC = document.getElementById("outC");
 const outK = document.getElementById("outK");
 const calcBtn = document.getElementById("calc-btn");
 let temp = document.getElementById("input");
-
-// let inUnit;
-// let outUnit;
+let conTemp;
+let inUnit;
+let outUnit;
 
 // F to C: ((F - 32) * .5556) = C
 // F to K: ((F + 459.67) * (5/9) = K
@@ -19,7 +19,7 @@ let temp = document.getElementById("input");
 // K to F: (K * (9/5) - 459.67) = F
 // K to C: K - 273.15 = C
 
-// Eventually, add Rankine and cricket chirps as a unit option
+// Eventually, add Rankine and cricket chirps as a unit option because why not
 // https://en.wikipedia.org/wiki/Rankine_scale
 // https://www.almanac.com/predict-temperature-cricket-chirps
 
@@ -45,47 +45,48 @@ function convert(temp, inUnit, outUnit) {
     return conTemp;
   }
   calculatedTemp.textContent = `${conTemp}${outUnit}`;
-}
-// console.log(convert(51, "C", "F"));
+};
+console.log(convert(51, "C", "F"));
 
 // Event Listeners
-inF.addEventListener("click", function () {
-  inC.disabled;
-  inK.disabled;
-  inUnit = "F";
-});
+// inF.addEventListener("click", function () {
+//   inC.disabled;
+//   inK.disabled;
+//   inUnit = "F";
+// });
 
-inC.addEventListener("click", function () {
-  inF.disabled;
-  inK.disabled;
-  inUnit = "C";
-  console.log(inUnit);
-});
+// inC.addEventListener("click", function () {
+//   inF.disabled;
+//   inK.disabled;
+//   inUnit = "C";
+//   console.log(inUnit);
+// });
 
-inK.addEventListener("click", function () {
-  inF.disabled;
-  inC.disabled;
-  inUnit = "K";
-});
+// inK.addEventListener("click", function () {
+//   inF.disabled;
+//   inC.disabled;
+//   inUnit = "K";
+// });
 
-outF.addEventListener("click", function () {
-  outC.disabled;
-  outK.disabled;
-  outUnit = "F";
-});
+// outF.addEventListener("click", function () {
+//   outC.disabled;
+//   outK.disabled;
+//   outUnit = "F";
+// });
 
-outC.addEventListener("click", function () {
-  outF.disabled;
-  outK.disabled;
-  outUnit = "C";
-});
+// outC.addEventListener("click", function () {
+//   outF.disabled;
+//   outK.disabled;
+//   outUnit = "C";
+// });
 
-outK.addEventListener("click", function () {
-  outF.classList.add("hidden");
-  outF.disabled;
-  outC.disabled;
-  outUnit = "K";
-});
+// outK.addEventListener("click", function () {
+//   outF.classList.add("disabled");
+//   // outF.disabled;
+//   // outC.disabled;
+//   outUnit = "K";
+//   console.log(outUnit);
+// });
 
 // Event Listeners
-calcBtn.addEventListener("click", convert(temp));
+calcBtn.addEventListener("click", convert);
