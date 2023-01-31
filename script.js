@@ -26,27 +26,27 @@ let temp = document.getElementById("input");
 // Conversion function
 function convert(temp, inUnit, outUnit) {
   if (inUnit === "F" && outUnit === "C") {
-    conTemp = (temp - 32) * 0.5556;
+    conTemp = Math.floor((temp - 32) * 0.5556);
     return conTemp;
   } else if (inUnit === "F" && outUnit === "K") {
-    conTemp = (temp + 459.67) * (5 / 9);
+    conTemp = Math.floor((temp + 459.67) * (5 / 9));
     return conTemp;
   } else if (inUnit === "C" && outUnit === "F") {
-    conTemp = temp * 1.8 + 32;
+    conTemp = Math.floor(temp * 1.8 + 32);
     return conTemp;
   } else if (inUnit === "C" && outUnit === "K") {
-    conTemp = temp + 273.15;
+    conTemp = Math.floor(temp + 273.15);
     return conTemp;
   } else if (inUnit === "K" && outUnit === "F") {
-    conTemp = temp * (9 / 5) - 459.67;
+    conTemp = Math.floor(temp * (9 / 5) - 459.67);
     return conTemp;
   } else if (inUnit === "K" && outUnit === "F") {
-    conTemp = temp - 273.15;
+    conTemp = Math.floor(temp - 273.15);
     return conTemp;
   }
-  calculatedTemp.textContent = `${conTemp}`;
+  calculatedTemp.textContent = `${conTemp}${outUnit}`;
 }
-// console.log(convert(0, 'C', 'F'));
+// console.log(convert(51, "C", "F"));
 
 // Event Listeners
 inF.addEventListener("click", function () {
@@ -87,4 +87,5 @@ outK.addEventListener("click", function () {
   outUnit = "K";
 });
 
+// Event Listeners
 calcBtn.addEventListener("click", convert(temp));
