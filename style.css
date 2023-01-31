@@ -26,7 +26,7 @@ body {
   gap: 20%;
 }
 
-.input {
+#input {
   display: flex;
   padding: 10px 20px;
   background-color: #27272a;
