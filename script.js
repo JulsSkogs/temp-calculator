@@ -53,6 +53,8 @@ inF.addEventListener("click", function () {
   inC.disabled = true;
   inK.disabled = true;
   inUnit = "F";
+  console.log(inC.disabled);
+  console.log(inUnit);
 });
 
 // inC.addEventListener("click", function () {
@@ -88,5 +90,4 @@ inF.addEventListener("click", function () {
 //   console.log(outUnit);
 // });
 
-// Event Listeners
 calcBtn.addEventListener("click", convert(temp, inUnit, outUnit));

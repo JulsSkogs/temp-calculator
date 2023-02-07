@@ -44,11 +44,7 @@ button {
   border-radius: 10px;
 }
 
-inC:disabled {
-  color: white;
-}
-
-inK:disabled {
+#btn.disabled {
   color: white;
 }
 
