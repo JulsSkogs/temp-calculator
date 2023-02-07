@@ -45,15 +45,15 @@ function convert(temp, inUnit, outUnit) {
     return conTemp;
   }
   calculatedTemp.textContent = `${conTemp}${outUnit}`;
-};
-console.log(convert(51, "C", "F"));
+}
+// console.log(convert(51, "C", "F"));
 
 // Event Listeners
-// inF.addEventListener("click", function () {
-//   inC.disabled;
-//   inK.disabled;
-//   inUnit = "F";
-// });
+inF.addEventListener("click", function () {
+  inC.disabled = true;
+  inK.disabled = true;
+  inUnit = "F";
+});
 
 // inC.addEventListener("click", function () {
 //   inF.disabled;
@@ -89,4 +89,4 @@ console.log(convert(51, "C", "F"));
 // });
 
 // Event Listeners
-calcBtn.addEventListener("click", convert);
+calcBtn.addEventListener("click", convert(temp, inUnit, outUnit));
