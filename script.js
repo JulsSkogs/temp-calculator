@@ -7,7 +7,8 @@ const outF = document.getElementById("outF");
 const outC = document.getElementById("outC");
 const outK = document.getElementById("outK");
 const calcBtn = document.getElementById("calc-btn");
-let temp = Number(document.getElementById("input"));
+const resetBtn = document.getElementById("reset-btn");
+let temp = document.getElementById("input");
 let conTemp;
 let inUnit;
 let outUnit;
@@ -27,67 +28,73 @@ let outUnit;
 function convert(temp, inUnit, outUnit) {
   if (inUnit === "F" && outUnit === "C") {
     conTemp = Math.floor((temp - 32) * 0.5556);
-    return conTemp;
   } else if (inUnit === "F" && outUnit === "K") {
     conTemp = Math.floor((temp + 459.67) * (5 / 9));
-    return conTemp;
   } else if (inUnit === "C" && outUnit === "F") {
     conTemp = Math.floor(temp * 1.8 + 32);
-    return conTemp;
   } else if (inUnit === "C" && outUnit === "K") {
     conTemp = Math.floor(temp + 273.15);
-    return conTemp;
   } else if (inUnit === "K" && outUnit === "F") {
     conTemp = Math.floor(temp * (9 / 5) - 459.67);
-    return conTemp;
   } else if (inUnit === "K" && outUnit === "F") {
     conTemp = Math.floor(temp - 273.15);
-    return conTemp;
   }
-  calculatedTemp.textContent = `${conTemp}${outUnit}`;
+  return conTemp;
 }
-// console.log(convert(51, "C", "F"));
 
 // Event Listeners
 inF.addEventListener("click", function () {
   inC.disabled = true;
   inK.disabled = true;
   inUnit = "F";
-  console.log(inC.disabled);
-  console.log(inUnit);
 });
 
-// inC.addEventListener("click", function () {
-//   inF.disabled;
-//   inK.disabled;
-//   inUnit = "C";
-//   console.log(inUnit);
-// });
+inC.addEventListener("click", function () {
+  inF.disabled = true;
+  inK.disabled = true;
+  inUnit = "C";
+});
 
-// inK.addEventListener("click", function () {
-//   inF.disabled;
-//   inC.disabled;
-//   inUnit = "K";
-// });
+inK.addEventListener("click", function () {
+  inF.disabled = true;
+  inC.disabled = true;
+  inUnit = "K";
+});
 
-// outF.addEventListener("click", function () {
-//   outC.disabled;
-//   outK.disabled;
-//   outUnit = "F";
-// });
+outF.addEventListener("click", function () {
+  outC.disabled = true;
+  outK.disabled = true;
+  outUnit = "F";
+});
 
-// outC.addEventListener("click", function () {
-//   outF.disabled;
-//   outK.disabled;
-//   outUnit = "C";
-// });
+outC.addEventListener("click", function () {
+  outF.disabled = true;
+  outK.disabled = true;
+  outUnit = "C";
+});
 
-// outK.addEventListener("click", function () {
-//   outF.classList.add("disabled");
-//   // outF.disabled;
-//   // outC.disabled;
-//   outUnit = "K";
-//   console.log(outUnit);
-// });
+outK.addEventListener("click", function () {
+  outF.disabled = true;
+  outC.disabled = true;
+  outUnit = "K";
+});
 
-calcBtn.addEventListener("click", convert(temp, inUnit, outUnit));
+input.addEventListener("input", function (event) {
+  temp = Number(event.target.value);
+  console.log(outUnit);
+});
+
+calcBtn.addEventListener("click", () => {
+  calculatedTemp.textContent = `${convert(temp, inUnit, outUnit)}${outUnit}`;
+});
+
+resetBtn.addEventListener("click", () => {
+  calculatedTemp.textContent = "";
+  temp = "";
+  inF.disabled = false;
+  inC.disabled = false;
+  inK.disabled = false;
+  outF.disabled = false;
+  outC.disabled = false;
+  outK.disabled = false;
+});

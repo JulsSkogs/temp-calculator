@@ -45,11 +45,15 @@ button {
 }
 
 .btn[disabled] {
-  background-color: gray;
+  background-color: black;
 }
 
 #calc-btn {
-  width: 170px;
+  width: 80px;
+}
+
+#reset-btn {
+  width: 80px;
 }
 
 .unit-text {
