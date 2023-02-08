@@ -44,12 +44,8 @@ button {
   border-radius: 10px;
 }
 
-inC:disabled {
-  color: white;
-}
-
-inK:disabled {
-  color: white;
+.btn[disabled] {
+  background-color: gray;
 }
 
 #calc-btn {

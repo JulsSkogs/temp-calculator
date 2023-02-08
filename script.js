@@ -7,7 +7,7 @@ const outF = document.getElementById("outF");
 const outC = document.getElementById("outC");
 const outK = document.getElementById("outK");
 const calcBtn = document.getElementById("calc-btn");
-let temp = document.getElementById("input");
+let temp = Number(document.getElementById("input"));
 let conTemp;
 let inUnit;
 let outUnit;
